@@ -8,7 +8,8 @@ public class StringUtilities {
      * @return `Hello World` as a string
      */
     public static String getHelloWorld() {
-        return null;
+        String myString = "Hello World";
+        return myString;
     }
 
     /**
@@ -17,7 +18,7 @@ public class StringUtilities {
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
     public static String concatenation(String firstSegment, String secondSegment){
-        return null;
+        return firstSegment+secondSegment;
     }
 
     /**
@@ -26,7 +27,7 @@ public class StringUtilities {
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
     public static String concatenation(int firstSegment, String secondSegment){
-        return null;
+        return firstSegment+secondSegment;
     }
 
     /**
@@ -34,7 +35,10 @@ public class StringUtilities {
      * @return the first 3 characters of `input`
      */
     public static String getPrefix(String input){
-        return null;
+        String inputPrefix = "";
+        inputPrefix = input.substring(0,3);
+        
+        return inputPrefix;
     }
 
     /**
@@ -42,7 +46,9 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return null;
+        String inputSuffix = "";
+        inputSuffix = input.substring(input.length()-3);
+        return inputSuffix;
     }
 
     /**
@@ -51,7 +57,14 @@ public class StringUtilities {
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+        
+        Boolean myBoolean = false;
+        if (inputValue == comparableValue) {
+            myBoolean = true;
+        
+        }
+        
+        return myBoolean;
     }
 
     /**
@@ -59,7 +72,13 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        return null;
+        int inputValueLength;
+        inputValueLength = inputValue.length()-1;
+        
+        int middle = inputValueLength/2;
+        
+        char returnValue = inputValue.charAt(middle);
+        return returnValue;
     }
 
     /**
@@ -67,7 +86,9 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        return null;
+        String splitUpSentence[] = spaceDelimitedString.split(" ");
+        String result = splitUpSentence[0];
+        return result;
     }
 
     /**
@@ -75,7 +96,9 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        return null;
+        String splitUpSentence[] = spaceDelimitedString.split(" ");
+        String result = splitUpSentence[1];
+        return result;
     }
 
     /**
@@ -83,6 +106,9 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+        StringBuffer myStringBuffer = new StringBuffer(stringToReverse);
+        myStringBuffer = myStringBuffer.reverse();
+        String result = myStringBuffer.toString();
+        return result;
     }
 }
